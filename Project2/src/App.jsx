@@ -1,10 +1,10 @@
 import React from 'react';
-import ModalDemo from './components/ModalDemo';
+import TermsModalDemo from './components/TermsModalDemo';
 
 function App() {
   return (
     <div>
-      <ModalDemo />
+      <TermsModalDemo />
     </div>
   );
 }
