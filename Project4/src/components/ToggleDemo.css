@@ -1,0 +1,53 @@
+.toggle-demo {
+  text-align: center;
+  margin: 60px auto;
+  font-family: Arial;
+}
+
+.toggle-demo button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 10px;
+}
+.toggle-demo {
+  text-align: center;
+  margin: 60px auto;
+  font-family: Arial;
+}
+
+.toggle-demo button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* ✅ True/False text color styles */
+.true-text {
+  color: green;
+}
+
+.false-text {
+  color: red;
+}

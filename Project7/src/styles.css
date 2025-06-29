@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.field-editor {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.field-editor input,
+.field-editor select {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.field-editor button {
+  padding: 8px 16px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-preview .form-field {
+  margin-bottom: 15px;
+}
+
+.form-preview label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-preview input,
+.form-preview textarea,
+.form-preview select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
