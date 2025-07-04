@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// @ts-ignore
-import html2pdf from "html2pdf.js";
+import Logo from "../assets/images/img1.png"; // ✅ Make sure the logo exists here
 
 const Result = () => {
   const pdfRef = useRef();
@@ -22,7 +21,16 @@ const Result = () => {
     color: "#000",
   };
 
-  const handleDownload = () => {
+  const getFormattedDate = () => {
+    const today = new Date();
+    return today.toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
+  const handleDownload = async () => {
     const element = pdfRef.current;
     const opt = {
       margin: 0.5,
@@ -32,6 +40,7 @@ const Result = () => {
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
     };
 
+    const html2pdf = (await import("html2pdf.js")).default;
     html2pdf().set(opt).from(element).save();
   };
 
@@ -47,7 +56,20 @@ const Result = () => {
 
   return (
     <div className="container-fluid min-vh-100 p-3" style={styles}>
+      {/* ✅ PDF content starts here */}
       <div ref={pdfRef}>
+        {/* ✅ Logo, Title, and Date */}
+        <div className="text-center mb-4">
+          <img
+            src={Logo}
+            alt="Logo"
+            style={{ width: "120px", marginBottom: "10px" }}
+          />
+          <h3 style={{ fontWeight: "bold" }}>Result Summary</h3>
+          <p>Date: {getFormattedDate()}</p>
+        </div>
+
+        {/* Stats */}
         <div className="row text-center mb-4 g-3">
           {[
             { label: "Total Trainees", value: 15 },
@@ -67,6 +89,7 @@ const Result = () => {
           ))}
         </div>
 
+        {/* Table */}
         <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead>
@@ -132,6 +155,7 @@ const Result = () => {
         </div>
       </div>
 
+      {/* Buttons (excluded from PDF) */}
       <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
         <button className="btn btn-dark" onClick={handleDownload}>
           Download PDF
