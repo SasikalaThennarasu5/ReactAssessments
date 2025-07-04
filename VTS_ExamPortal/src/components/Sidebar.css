@@ -1,0 +1,11 @@
+/* Sidebar.css */
+
+/* Desktop sidebar */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}

@@ -1,0 +1,12 @@
+.login-bg {
+  background-image: url('../assets/images/Login Image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Urbanist', sans-serif;
+}
+
+input.form-control::placeholder {
+  color: #888;
+  font-family: 'Urbanist', sans-serif;
+}

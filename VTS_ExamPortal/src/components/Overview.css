@@ -1,0 +1,7 @@
+.overview-page input::placeholder {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.overview-page p, h3, h5, h6, button, small, div {
+  font-family: 'Urbanist', sans-serif;
+}
