@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import html2pdf from "html2pdf.js";
+import html2pdf from 'html2pdf.js';
 
 const Result = () => {
   const pdfRef = useRef();
